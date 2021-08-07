@@ -1,0 +1,1 @@
+from .request import get_single_location, get_all_locations
