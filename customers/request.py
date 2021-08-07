@@ -1,6 +1,3 @@
-from animals import request
-
-
 CUSTOMERS = [
     {
         "id": 1,
