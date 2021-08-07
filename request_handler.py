@@ -1,3 +1,4 @@
+from employees.request import get_all_employees, get_single_employee
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from animals import get_all_animals, get_single_animal
 from locations import get_all_locations, get_single_location
@@ -68,6 +69,13 @@ class HandleRequests(BaseHTTPRequestHandler):
 
             else:
                 response = get_all_locations()
+
+        if resource == "employees":
+            if id is not None:
+                response = f"{get_single_employee(id)}"
+
+            else:
+                response = get_all_employees()
 
         # This weird code sends a response back to the client
         self.wfile.write(f"{response}".encode())
