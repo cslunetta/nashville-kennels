@@ -1,1 +1,1 @@
-from .request import get_single_location, get_all_locations
+from .request import get_single_location, get_all_locations, create_location, delete_location
